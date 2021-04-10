@@ -7,8 +7,8 @@ const htmlRoutes = require('./apiRoutes/noteRoutes/htmlRoutes');
 app.use(express.urlencoded({extended: true}));
 // parese incoming JSON data
 app.use(express.json());
-app.use(express.static('public/assets'));
-//app.use('/api', noteRoutes);
+app.use(express.static('public'));
+app.use('/api', noteRoutes);
 app.use('/', htmlRoutes);
 
 
